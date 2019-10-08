@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @FeignClient("feign-service")
 public interface TestClient {
-    @RequestMapping(value = "/hystrix-test/{number}", method = RequestMethod.GET)
+    @RequestMapping(value = "/service/hystrix-test/{number}", method = RequestMethod.GET)
     String hystrixTest(@PathVariable Integer number) throws Exception;
 }

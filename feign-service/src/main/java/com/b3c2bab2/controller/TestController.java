@@ -12,20 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
  * created on 2019/9/26
  */
 @RestController
+@RequestMapping("/service")
 public class TestController {
     @Autowired
-    private DiscoveryClient discoveryClient;
-    @Autowired
     private TestService testService;
-
-    @RequestMapping("/test")
-    public String test() {
-        return "test";
-    }
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     @RequestMapping("/count")
     public Integer count() {
-        return discoveryClient.getInstances("eureka-server").size();
+        return discoveryClient.getServices().size();
+    }
+
+    @RequestMapping("/name")
+    public String test() {
+        return "feign-service";
     }
 
     @RequestMapping("/hystrix-test/{number}")

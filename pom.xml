@@ -12,6 +12,7 @@
         <module>eureka-server</module>
         <module>feign-client</module>
         <module>feign-service</module>
+        <module>zuul-server</module>
     </modules>
 
     <properties>
