@@ -1,4 +1,4 @@
-package com.b3c2bab2.bootcloudclient.service;
+package com.b3c2bab2.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.command.AsyncResult;

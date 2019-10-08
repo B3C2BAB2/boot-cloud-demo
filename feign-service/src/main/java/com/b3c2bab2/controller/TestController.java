@@ -1,6 +1,6 @@
-package com.b3c2bab2.bootcloudclient.controller;
+package com.b3c2bab2.controller;
 
-import com.b3c2bab2.bootcloudclient.service.TestService;
+import com.b3c2bab2.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,12 +20,12 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test() {
-        return "fuck";
+        return "test";
     }
 
     @RequestMapping("/count")
     public Integer count() {
-        return discoveryClient.getInstances("demo-server").size();
+        return discoveryClient.getInstances("eureka-server").size();
     }
 
     @RequestMapping("/hystrix-test/{number}")
