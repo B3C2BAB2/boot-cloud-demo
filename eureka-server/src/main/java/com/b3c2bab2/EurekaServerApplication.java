@@ -2,6 +2,7 @@ package com.b3c2bab2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
@@ -10,6 +11,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
  * created on 2019/9/30
  */
 @SpringBootApplication
+@EnableConfigServer
 @EnableEurekaServer
 @EnableHystrixDashboard
 public class EurekaServerApplication {
