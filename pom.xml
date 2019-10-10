@@ -13,8 +13,6 @@
         <module>feign-client</module>
         <module>feign-service</module>
         <module>zuul-server</module>
-        <module>config-server</module>
-        <module>config-repo</module>
     </modules>
 
     <properties>
