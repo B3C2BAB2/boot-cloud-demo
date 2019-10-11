@@ -31,7 +31,7 @@
 [http://localhost:8080/service/hystrix-test/1](http://localhost:8080/service/hystrix-test/1)
 - 通过计算除数为0的算式抛出运行时异常以触发`@HystrixCommand`:
 [http://localhost:8080/service/hystrix-test/0](http://localhost:8080/service/hystrix-test/0)
-- 返回`feign-service`的`eureka`实例名,供`zuul-server`调用
+- 返回`feign-service`的`eureka`实例名,供`zuul-server`调用:
 [http://localhost:8080/service/name](http://localhost:8080/service/name)
 
 ## feign-client
@@ -41,9 +41,9 @@
 - `feign`用于调用`feign-service`的接口
 
 ### 重要接口
-- 使用`feign`调用上述`feign-service`的接口
+- 使用`feign`调用上述`feign-service`的接口:
 [http://localhost:8081/client/hystrix-test/0](http://localhost:8081/client/hystrix-test/0)
-- 返回`feign-client`的`eureka`实例名,供`zuul-server`调用
+- 返回`feign-client`的`eureka`实例名,供`zuul-server`调用:
 [http://localhost:8081/client/name](http://localhost:8081/client/name)
 
 ## zuul-server
@@ -54,9 +54,9 @@
 - `zuul`起路由和过滤器的功能
 
 ### 重要接口
-- 使用过滤器处理，返回`feign-service`的`eureka`实例名
+- 使用过滤器处理，返回`feign-service`的`eureka`实例名:
 [http://localhost:8082/service/name](http://localhost:8082/service/name)
-- 使用过滤器处理，返回`feign-client`的`eureka`实例名
+- 使用过滤器处理，返回`feign-client`的`eureka`实例名:
 [http://localhost:8082/client/name](http://localhost:8082/client/name)
 
 ## 参考文档
