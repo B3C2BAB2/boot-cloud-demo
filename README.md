@@ -60,5 +60,5 @@
 [http://localhost:8082/client/name](http://localhost:8082/client/name)
 
 ## 参考文档
-* [Spring Cloud Netflix官方文档](https://cloud.spring.io/spring-cloud-netflix/reference/html/)
-* [Spring Cloud Config官方文档](https://cloud.spring.io/spring-cloud-config/reference/html/#_spring_cloud_config_server)
+* [https://cloud.spring.io/spring-cloud-netflix/reference/html/](https://cloud.spring.io/spring-cloud-netflix/reference/html/)
+* [https://cloud.spring.io/spring-cloud-config/reference/html/](https://cloud.spring.io/spring-cloud-config/reference/html/)
