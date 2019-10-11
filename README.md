@@ -3,10 +3,10 @@
 
 ## eureka-server
 ### 组件说明
-- `config`作为config-server获取git上的分布式系统的配置,
+- `config`作为`config-server`获取git上的分布式系统的配置,
  [config-repo地址](https://github.com/B3C2BAB2/config-repo)
-- `eureka-server`用于注册eureka实例
-- `hystrix-dashboard`使用hystrix仪表盘查看hystrix的使用情况
+- `eureka-server`用于注册`eureka`实例
+- `hystrix-dashboard`使用`hystrix`仪表盘查看`hystrix`的使用情况
 
 ### 重要接口
 - 显示eureka实例的运行状况:
@@ -22,8 +22,8 @@
 
 ## feign-service
 ### 组件说明
-- `config`用于从config-server获取配置
-- `eureka-client`用于在eureka-server上发现其他的eureka客户端
+- `config`用于从`config-server`获取配置
+- `eureka-client`用于在`eureka-server`上发现其他的`eureka`客户端
 - `hystrix`熔断器,这里的示例用于异常处理
 
 ### 重要接口
@@ -31,26 +31,26 @@
 [http://localhost:8080/service/hystrix-test/1](http://localhost:8080/service/hystrix-test/1)
 - 通过计算除数为0的算式抛出运行时异常以触发`@HystrixCommand`:
 [http://localhost:8080/service/hystrix-test/0](http://localhost:8080/service/hystrix-test/0)
-- 返回`feign-service`的`eureka`实例名
+- 返回`feign-service`的`eureka`实例名,供`zuul-server`调用
 [http://localhost:8080/service/name](http://localhost:8080/service/name)
 
 ## feign-client
 ### 组件说明
-- `config`用于从config-server获取配置
-- `eureka-client`用于在eureka-server上发现其他的eureka客户端
+- `config`用于从`config-server`获取配置
+- `eureka-client`用于在`eureka-server`上发现其他的eureka客户端
 - `feign`用于调用`feign-service`的接口
 
 ### 重要接口
-- 使用feign调用上述`feign-service`的接口
+- 使用`feign`调用上述`feign-service`的接口
 [http://localhost:8081/client/hystrix-test/0](http://localhost:8081/client/hystrix-test/0)
-- 返回`feign-client`的`eureka`实例名
+- 返回`feign-client`的`eureka`实例名,供`zuul-server`调用
 [http://localhost:8081/client/name](http://localhost:8081/client/name)
 
 ## zuul-server
 模块中不编写任何接口，只通过`zuul`调用`feign-service`,`feign-client`的接口
 ### 组件说明
-- `config`用于从config-server获取配置
-- `eureka-client`用于在eureka-server上发现其他的eureka客户端
+- `config`用于从`config-server`获取配置
+- `eureka-client`用于在`eureka-server`上发现其他的`eureka`客户端
 - `zuul`起路由和过滤器的功能
 
 ### 重要接口
